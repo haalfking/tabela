@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabela</title>
+    <link rel="stylesheet" href="./style.css" id="linkestilos">
+    
+</head>
+<body>
+    <table>
+        <caption>cadastro</caption>
+         <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Empresa</th>
+                <th>E-mail</th>
+                <th>Cracha</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+                <td>174</td>
+                <td>Carlos Magnum</td>
+                <td>Gerente</td>
+                <td>IBM</td>
+                <td>carlos.2023@hotmail.com</td>
+                <td>Sim</td>
+            </tr>
+            <tr>
+                <td>348</td>
+                <td>Felipe silva</td>
+                <td>ADM</td>
+                <td>IBM</td>
+                <td>felipe_corporativo@hotmail.com</td>
+                <td>Sim</td>
+            </tr>
+            <tr>
+                <td>498</td>
+                <td>Silvio Santos</td>
+                <td>RH</td>
+                <td>IBM</td>
+                <td>silvio.santos171@gmail.com</td>
+                <td>Não</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>Daniel Batista</td>
+                <td>Developer Web</td>
+                <td>IBM</td>
+                <td>carvalho.daniel.15@gmail.com</td>
+                <td>Sim</td>
+            </tr>
+            <tr>
+                <td>598</td>
+                <td>Lucas santos</td>
+                <td>Contabilidade</td>
+                <td>IBM</td>
+                <td>lucassantos@gmail.com</td>
+                <td>Sim</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+                <td colspan></td>
+            </tr>
+         </tfoot>
+    </table>
+    <button type="button" id="botao">Remover Estilo</button>
+    <script>
+        function removerOuAplicaEstilo() {
+            const linkestilos = document.querySelector("#linkestilos");
+          if  (linkestilos.hasAttribute('disabled')) {
+                linkestilos.removeAttribute('disabled');
+                botao.innerHTML = 'Remover Estilo';
+          }else {
+            linkestilos.setAttribute('disabled','');
+            botao.innerHTML = 'colocar estilo';
+          }
+        }
+        const botao = document.querySelector('#botao');
+             botao.addEventListener('click',removerOuAplicaEstilo);
+
+    </script>
+</body>
+</html>
